@@ -34,11 +34,11 @@ export default function CartRow({item, rmItem, onQtyChange}: ICartRowProps) {
 				</div>
 			</div>
 			<div className='cart-item__col col-md-2'>
-				<span className='cart-items__label'><strong>Price: </strong></span>
+				<span className='cart-items__label'><strong>Precio: </strong></span>
 				{formatMoney(item.itemPrice.final_price)}
 			</div>
 			<div className='cart-item__col cart-item__col_qty col-md-2'>
-				<span className='cart-items__label'><strong>Qty: </strong></span>
+				<span className='cart-items__label'><strong>Cantidad: </strong></span>
 				<div className='cart-item__qty-input input-group input-group-sm'>
 					<button
 						className='btn btn-outline-secondary text-center'
@@ -71,7 +71,7 @@ export default function CartRow({item, rmItem, onQtyChange}: ICartRowProps) {
 					className='btn btn-sm btn-outline-secondary'
 					onClick={rmItem}
 				>
-					Remove
+					Remover
 				</button>
 			</div>
 		</div >

@@ -11,29 +11,29 @@ export default function MarsTopNav() {
 		<nav className={'mars-top-nav'}>
 			<div className={'container-xxl mars-top-nav__container'}>
 				<div className={'mars-top-nav__contacts'}>
-					<Contact href={'tel:+18001234567'}
-									 label={'+1 (800) 123-45-67'}
+					<Contact href={'tel:+593987309734'}
+									 label={'+593987309734'}
 									 icon={<FontAwesomeIcon icon={faPhoneAlt} />}
 					/>
-					<Contact href={'https://api.whatsapp.com/send?phone=10001234567&text=hello'}
-									 label={'+1 (000) 123-45-67'}
+					<Contact href={'https://api.whatsapp.com/send/?phone=593987309734&text&type=phone_number&app_absent=0'}
+									 label={'+593987309734'}
 									 icon={<FontAwesomeIcon icon={faWhatsapp} />}
 					/>
 				</div>
 				<div className={'mars-top-nav__note'}>
 					<p>
-						Opening hours 9 a.m. - 6 p.m. <FontAwesomeIcon icon={faShippingFast} className={'text-theme-color ms-1'} />
+						Horario de apertura y cierre 9 a.m. - 6 p.m. <FontAwesomeIcon icon={faShippingFast} className={'text-theme-color ms-1'} />
 					</p>
 				</div>
 				<ul className={'mars-top-nav__menu list-unstyled'}>
 					<li className={'mars-top-nav__menu-item'}>
 						<Link href={'/shipping'}>
-							<a className='mars-top-nav__menu-link'>Shipping</a>
+							<a className='mars-top-nav__menu-link'>Envios</a>
 						</Link>
 					</li>
 					<li className={'mars-top-nav__menu-item'}>
 						<Link href={'/about'}>
-							<a className='mars-top-nav__menu-link'>About</a>
+							<a className='mars-top-nav__menu-link'>Sobre nosotros</a>
 						</Link>
 					</li>
 				</ul>

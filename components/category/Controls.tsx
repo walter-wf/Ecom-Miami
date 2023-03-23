@@ -9,7 +9,7 @@ export default function CaregoryControls({params, onSort, onMobileShow}: Control
 			<div className='category-controls__mobile'>
 				<button className='btn btn-outline-secondary category-controls__toggle-filters' onClick={onMobileShow}>
 					<FontAwesomeIcon className='me-2' icon={faSlidersH} />
-					Filters
+					Filtros
 				</button>
 			</div>
 			<SortButtons params={params} onSort={onSort} className='category-controls__sort' />

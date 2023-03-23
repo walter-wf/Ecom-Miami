@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 export default function SocialButtons() {
 	return (
 		<>
-			<h3 className='page-footer__header'>Follow us</h3>
+			<h3 className='page-footer__header'>Redes sociales</h3>
 			<div className='page-footer__social-buttons'>
 				<div className='page-footer__social-button'>
 					<a className='page-footer__social-link' target='_blank' href='https://fb.com'>
@@ -25,7 +25,7 @@ export default function SocialButtons() {
 				</div>
 			</div>
 			<p className='page-footer__social-buttons company-info'>
-				All rights reserved. © Boundless-Commerce
+				Todos los derechos reservados. Miami Store 2023
 			</p>
 		</>
 	);

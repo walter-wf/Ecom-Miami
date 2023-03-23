@@ -29,7 +29,7 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 		<MainLayout mainMenu={mainMenu} footerMenu={footerMenu}>
 			<div className='container-xxl'>
 				<MainPageSlider />
-				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Boundless store</h1>
+				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Miami Store</h1>
 				<ProductsList
 					products={products}
 					className={'page-block'}
@@ -64,26 +64,26 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 					wrapperClassName='page-block'
 				/>
 				<div className={'page-block'}>
-					<h2 className={'text-center mb-4'}>Our customers love us:</h2>
+					<h2 className={'text-center mb-4'}>Nuestros clientes nos recomiendan</h2>
 					<Reviews
 						reviews={[
 							{
 								image: <img src={reviewWoman1.src} className={'reviews__img'} />,
 								title: 'Amanda',
-								jobTitle: 'CEO reseller corp',
-								comment: 'I like working with the wholesales team. We are thankful for your great service!'
+								jobTitle: 'CEO',
+								comment: 'Me gusta trabajar con el equipo de mayoristas. Estamos agradecidos por su gran servicio!'
 							},
 							{
 								image: <img src={reviewMan1.src} className={'reviews__img'} />,
-								title: 'Jack',
-								jobTitle: 'Frequent buyer',
-								comment: 'I like the quality and the quick shipping.'
+								title: 'Jorge',
+								jobTitle: 'Comprador frecuente',
+								comment: 'Me gusta la calidad y el envío rápido.'
 							},
 							{
 								image: <img src={reviewMan2.src} className={'reviews__img'} />,
-								title: 'Dave',
-								jobTitle: 'Founder at Startup',
-								comment: 'I love how the things are going!'
+								title: 'David',
+								jobTitle: 'Fundador de una Startup',
+								comment: 'Me gusta el trato y calidad que tienen con el cliente'
 							},
 						]}
 					/>

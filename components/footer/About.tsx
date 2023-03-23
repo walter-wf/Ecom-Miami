@@ -2,7 +2,7 @@
 // import logoImg from '../../assets/logo.svg';
 
 export default function FooterAbout({companyTitle}: {companyTitle?: string}) {
-	const title = companyTitle || '© Your Company LLC.';
+	const title = companyTitle || '© Miami Store';
 	return (
 		<>
 			{/* <div className='page-footer__logo'>
@@ -16,8 +16,7 @@ export default function FooterAbout({companyTitle}: {companyTitle?: string}) {
 				<p className='title'>{title}</p>
 			</div>
 			<div className='page-footer__disclaimer'>
-					This website and its contents are provided "as is" and "as available" without any warranty or representations of any kind, whether express or implied.
-					Price and availability information is subject to change without notice.
+					Articulos exclusivos importados desde Miami, servicio de carga maritica y aerea. Envios a todo Ecuador
 			</div>
 		</>
 	);

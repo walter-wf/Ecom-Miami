@@ -14,7 +14,7 @@ export default function FiltersModal({show, setShow, children}: FiltersModalProp
 			<Modal.Header>
 				<Modal.Title><a href={'#'} className='close-filter' onClick={onBackClick}>
 					<FontAwesomeIcon className='me-2' icon={faArrowLeft} />
-					Back to products
+					Volver a productos
 				</a></Modal.Title>
 			</Modal.Header>
 			<Modal.Body>

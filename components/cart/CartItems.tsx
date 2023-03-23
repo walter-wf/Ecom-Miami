@@ -87,8 +87,8 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 			<div className='cart-items'>
 				<div className='cart-items__thead row'>
 					<div className='cart-items__thead-cell col-md-4'></div>
-					<div className='cart-items__thead-cell col-md-2'>Price</div>
-					<div className='cart-items__thead-cell col-md-2'>Qty</div>
+					<div className='cart-items__thead-cell col-md-2'>Precio</div>
+					<div className='cart-items__thead-cell col-md-2'>Cantidad</div>
 					<div className='cart-items__thead-cell col-md-2'>Total</div>
 					<div className='cart-items__thead-cell col-md-2'></div>
 				</div>
@@ -100,13 +100,13 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 					/>
 				))}
 				<div className='cart-items__total-row row'>
-					<div className='cart-items__total-cell cart-items__total-cell_title col-md-6'>Order Total:</div>
+					<div className='cart-items__total-cell cart-items__total-cell_title col-md-6'>Total Pedido:</div>
 					<div className='cart-items__total-cell col-md-2'>
-						<span className='cart-items__label'>Qty: </span>
+						<span className='cart-items__label'>Cantidad: </span>
 						{total.qty}
 					</div>
 					<div className='cart-items__total-cell col-md-2'>
-						<span className='cart-items__label'>Price: </span>
+						<span className='cart-items__label'>Precio: </span>
 						{total.price}
 					</div>
 				</div>
@@ -117,7 +117,7 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 					disabled={submitting}
 					onClick={() => router.push('/checkout')}
 				>
-					Proceed to checkout <FontAwesomeIcon icon={faShoppingCart} />
+					Finalizar compra <FontAwesomeIcon icon={faShoppingCart} />
 				</button>
 			</div>
 		</>

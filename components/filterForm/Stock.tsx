@@ -13,7 +13,7 @@ export default function Stock({onChange, values}: IFilterFieldProps) {
 						onChange={(e) => onChange({in_stock: e.target.checked ? '1' : ''})}
 						checked={values.in_stock == '1'}
 					/>
-					In stock
+					En stock
 				</label>
 			</div>
 

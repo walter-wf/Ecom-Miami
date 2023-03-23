@@ -24,13 +24,13 @@ export default function MarsLogoRow() {
 				<div className={'mars-logo-row__logo-wrapper'}>
 					<Link href={'/'}>
 						<a className={'mars-logo-row__logo'}>
-							<span>Brand Shop</span>
+							<span>Miami Store</span>
 							{/* <img src={logoImg.src} alt={'Brand Shop'} /> */}
 						</a>
 					</Link>
 				</div>
 				<div className={'mars-logo-row__welcome'}>
-					Welcome to our shop. We are working for you!
+					Bienvenido a nuestra tienda. ¡Estamos trabajando para ti!
 				</div>
 				<div className={'mars-logo-row__at-right'}>
 					<HeaderCart icon={<span className={'mars-logo-row__cart-icon'}><FontAwesomeIcon icon={faShoppingCart} /></span>}/>
