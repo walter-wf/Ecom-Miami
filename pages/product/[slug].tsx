@@ -64,7 +64,7 @@ export default function ProductPage({data: {product, categoryParents, mainMenu, 
 				<div className='product-page' itemScope itemType='//schema.org/Product'>
 					<div className='row'>
 						<div className='col-md-7'>
-							<h1 className='product-page__header mb-4' itemProp='name'>
+							<h1 className='product-page__header mb-4' itemProp='nombre'>
 								{product.text.title}
 							</h1>
 							<ProductLabels labels={product.labels} className={'mb-3'} />
@@ -82,7 +82,7 @@ export default function ProductPage({data: {product, categoryParents, mainMenu, 
 							<ProductShipping />
 						</div>
 					</div>
-					{product.text.description && <article itemProp='description'
+					{product.text.description && <article itemProp='descripcion'
 						className={'product-page__description'}
 						dangerouslySetInnerHTML={{__html: product?.text.description}} />}
 					<MetaSchemaOrg product={product} parents={resolvedParents} />

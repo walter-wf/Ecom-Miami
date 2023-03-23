@@ -16,7 +16,7 @@ export default function BreadCrumbs({items}: {items: IBreadCrumbItem[]}) {
 			{!isEmpty && <ol className='breadcrumb' itemProp='breadcrumb' itemScope itemType='//schema.org/BreadcrumbList'>
 				<li className='breadcrumb-item' {...richItemAttrs}>
 					<Link href='/'>
-						<a itemProp='item'><span itemProp='name'>Home</span></a>
+						<a itemProp='item'><span itemProp='name'>Inicio</span></a>
 					</Link>
 					<meta itemProp='position' content='1' />
 				</li>

@@ -17,8 +17,8 @@
     "theme"
   ],
   "main": "index.js",
-  "repository": "https://github.com/kirill-zhirnov/boundless-marsfull-nextjs-ecommerce-template",
-  "author": "Kirill Zhirnov <ekvixgroup@gmail.com>",
+  "repository": "https://github.com/Diegosilcor/Ecommer-Miami_Store-2023.git",
+  "author": "Diego Silva Cordoba",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

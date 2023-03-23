@@ -34,7 +34,7 @@ export default function CartItems({items, setItems, total}: ICartItemsProps) {
 
 	const rmItem = (itemId: number) => {
 		if (!cartId) return;
-		if (!confirm('Are you sure?')) return;
+		if (!confirm('Esta seguro?')) return;
 
 		setSubmitting(true);
 		const promise = apiClient.cart.removeFromCart(cartId, [itemId])

@@ -23,7 +23,7 @@ const Columns = ({columns}: {columns: IColumn[]}) => {
 		<div className={'text-with-icons__columns'}>
 			{columns.map((column, i) =>
 				<div className={'text-with-icons__column'}
-						 key={i}
+						key={i}
 				>
 					<div className={'text-with-icons__head-wrap'}>
 						<div className={'text-with-icons__icon-wrap'}>

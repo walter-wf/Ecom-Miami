@@ -11,7 +11,7 @@ export default function AsideBackdrop() {
 
 	return (
 		<div className={clsx('aside-backdrop', {'aside-backdrop_visible': asideIsOpened})}
-				 onClick={onClicked}
+				onClick={onClicked}
 		/>
 	);
 }

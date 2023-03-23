@@ -20,7 +20,7 @@ export default function PriceRangeField({field, onChange, values, idsPrefix}: IF
 
 	return (
 		<>
-			<label className='form-label'>Price ({getCurrencySymbol()})</label>
+			<label className='form-label'>Precio ({getCurrencySymbol()})</label>
 			<Range
 				allowCross={false}
 				className='range-slider mb-2'
@@ -33,7 +33,7 @@ export default function PriceRangeField({field, onChange, values, idsPrefix}: IF
 			/>
 			<div className={'row'}>
 				<div className={'col mb-3 d-flex gap-2 justify-content-center'}>
-					<label htmlFor={`${idsPrefix}filter_price_min`} className='text-muted'><small>From</small></label>
+					<label htmlFor={`${idsPrefix}filter_price_min`} className='text-muted'><small>De</small></label>
 					<input type='number'
 						className='form-control form-control-sm'
 						id={`${idsPrefix}filter_price_min`}
@@ -46,7 +46,7 @@ export default function PriceRangeField({field, onChange, values, idsPrefix}: IF
 					/>
 				</div>
 				<div className={'col mb-3 d-flex gap-2 justify-content-center'}>
-					<label htmlFor={`${idsPrefix}filter_price_max`} className='text-muted'><small>To</small></label>
+					<label htmlFor={`${idsPrefix}filter_price_max`} className='text-muted'><small>A</small></label>
 					<input type='number'
 						className='form-control form-control-sm'
 						id={`${idsPrefix}filter_price_max`}

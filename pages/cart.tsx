@@ -55,7 +55,7 @@ export default function CartPage({mainMenu, footerMenu}: ICartPageProps) {
 			<div className='container'>
 				<div className='cart-page row'>
 					<div className='col-lg-8 offset-lg-2'>
-						<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Shopping cart</h1>
+						<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Carrito de compras</h1>
 						<div className='cart-page__content'>
 							{(loading || cartInited === TCartInited.processing)
 								? <CartLoader />
@@ -63,11 +63,11 @@ export default function CartPage({mainMenu, footerMenu}: ICartPageProps) {
 									? <CartItems items={items} setItems={setItems} total={total}/>
 									: <>
 										<p className='cart-page__warning'>
-											Your shopping cart is empty.
+											Tu carrito de compras esta vacio
 										</p>
 										<p className='cart-page__warning'>
 											<Link href='/'>
-												<a className='btn btn-success'>Go shopping!</a>
+												<a className='btn btn-success'>Vamos a comprar!</a>
 											</Link>
 										</p>
 									</>}

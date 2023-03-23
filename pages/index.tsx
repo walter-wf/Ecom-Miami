@@ -40,18 +40,18 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 				columns={[
 					{
 						icon:  <FontAwesomeIcon icon={faBug} className={'text-with-icons__icon'} />,
-						title: 'Does not slip in the hands',
-						comment: 'Anti-slip coating - for reliability.'
+						title: 'Confianza y fiabalidad',
+						comment: ''
 					},
 					{
 						icon:  <FontAwesomeIcon icon={faShieldAlt} className={'text-with-icons__icon'} />,
-						title: 'Extra phone protection',
-						comment: 'Anti-slip coating - for reliability.'
+						title: 'Tu compra esta protegida',
+						comment: ''
 					},
 					{
 						icon:  <FontAwesomeIcon icon={faSmile} className={'text-with-icons__icon'} />,
-						title: 'Looks nice',
-						comment: 'With our cases your phone look even better than without.'
+						title: 'Se ve bien comprar en Miami Store',
+						comment: ''
 					},
 				]}
 				fullWidth={true}
@@ -60,7 +60,7 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 			<div className='container-xxl'>
 				<ProductsSliderByQuery
 					query={{collection: ['main-page'], sort: 'in_collection'}}
-					title={'Special offers:'}
+					title={'Ofertas especiales:'}
 					wrapperClassName='page-block'
 				/>
 				<div className={'page-block'}>
@@ -118,19 +118,19 @@ function 	MainPageSlider() {
 		{
 			'img': mobileSlider1Img.src,
 			'link': '',
-			'caption': 'Decorate your phone with our cases!',
+			'caption': '',
 			'captionPosition': 'bottom',
 			'useFilling': true,
-			'fillingColor': '#000000',
+			'fillingColor': '',
 			'fillingOpacity': 0.40
 		},
 		{
 			'img': mobileSlider2Img.src,
 			'link': '',
-			'caption': 'Pray not for easy lives, pray to be stronger men.',
+			'caption': '',
 			'captionPosition': 'bottom',
 			'useFilling': true,
-			'fillingColor': '#000000',
+			'fillingColor': '',
 			'fillingOpacity': 0.4
 		}
 	];

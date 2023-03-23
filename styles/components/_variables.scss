@@ -1,11 +1,11 @@
-$theme-color: #3462F1 !default;
-$theme-contrast-color: #fff !default;
+$theme-color: #f1db34 !default;
+$theme-contrast-color: rgb(15, 10, 10) !default;
 
-$front-font-family: 'Roboto', sans-serif !default;
+$front-font-family: 'Arial', sans-serif !default;
 
 $front-mars-top-nav-bg: #f2f2f2 !default;
-$front-mars-top-nav-txt-color: #4d4d4d !default;
-$front-mars-top-nav-menu-color: #000 !default;
+$front-mars-top-nav-txt-color: #0e0d0d !default;
+$front-mars-top-nav-menu-color: rgb(20, 20, 20) !default;
 
 $front-h-menu-bg: $theme-color;
 $front-h-menu-child-bg: #f2f2f2;
@@ -56,10 +56,10 @@ $front-aside-menu-active: $theme-color !default;
 $front-aside-menu-active-weight: 400 !default;
 
 $front-cart-header-qty-bg: $theme-color !default;
-$front-cart-header-qty-color: #4d4d4d !default;
+$front-cart-header-qty-color: #bd1919 !default;
 
-$front-v-menu-bg: #f8f8f8 !default;
-$front-v-menu-color: #000 !default;
+$front-v-menu-bg: #afb5a2 !default;
+$front-v-menu-color: rgb(226, 16, 16) !default;
 $front-v-menu-active: $theme-color !default;
 
 $front-h-menu-bg: #fff !default;
@@ -71,9 +71,9 @@ $front-h-menu-link-weight: $front-font-weight-bold;
 
 $call-to-order-top: 130px !default;
 
-$front-footer-bg: #333 !default;
-$front-footer-text-color: #999 !default;
-$front-footer-dusclaimer-color: #808080 !default;
+$front-footer-bg: rgb(3, 51, 102) !default;
+$front-footer-text-color: rgb(233, 243, 245) !default;
+$front-footer-dusclaimer-color: #f3efef !default;
 $front-footer-header-weight: 600 !default;
 $front-footer-link-color: #fff !default;
 //$front-footer-link-active: $theme-color !default;
