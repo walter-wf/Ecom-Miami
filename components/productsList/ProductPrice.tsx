@@ -11,7 +11,7 @@ export default function ProductPrice({price, className = 'products__price'}: {pr
 
 	return (
 		<div className={className}>
-			{tplPrice.isFrom && <span className={'from'}>From:</span>}
+			{tplPrice.isFrom && <span className={'from'}>Desde:</span>}
 			{tplPrice.oldPrice && <s className={'old'}>{formatMoney(tplPrice.oldPrice)}</s>}
 			<span className={clsx('current', {'has-old': tplPrice.oldPrice})}>
 				{formatMoney(tplPrice.price)}

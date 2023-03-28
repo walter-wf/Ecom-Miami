@@ -17,7 +17,7 @@ export default function FooterContacts() {
 				<span className='icon'>
 					<FontAwesomeIcon icon={faMapMarkerAlt}/>
 				</span>
-				<a className='link' href='#'>Quito, Ecuador</a>
+				<a className='link' href='#'>Guayaquil, Ecuador</a>
 			</p>
 			<p className='page-footer__icon-w-link'>
 				<span className='icon'>

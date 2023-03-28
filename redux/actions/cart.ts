@@ -47,7 +47,7 @@ export const addItem2Cart = (itemId: number, qty: number = 1, callToOrder: boole
 	try {
 		const cartId = getState().cart.cartId;
 		if (!cartId) {
-			dispatch(showErrorAlert('Error loading cart'));
+			dispatch(showErrorAlert('Error cargando la orden de compra'));
 			return;
 		}
 

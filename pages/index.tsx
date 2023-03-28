@@ -40,7 +40,7 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 				columns={[
 					{
 						icon:  <FontAwesomeIcon icon={faBug} className={'text-with-icons__icon'} />,
-						title: 'Confianza y fiabalidad',
+						title: 'Confianza y fiabilidad',
 						comment: ''
 					},
 					{

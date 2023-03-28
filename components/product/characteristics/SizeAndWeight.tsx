@@ -11,7 +11,7 @@ export default function SizeAndWeight({size}: {size: IItemSize}) {
 		<>
 			{hasDimensions && <dl className='product-attrs__item'>
 				<dt className='product-attrs__item-name-wrapper'>
-					<span className='product-attrs__item-name'>Size (L x W x H)</span>
+					<span className='product-attrs__item-name'>Tamaño (L x W x H)</span>
 				</dt>
 				<dd className='product-attrs__item-value'>
 					{`${length || ''} x ${width || ''} x ${height || ''} ${LENGTH_MEASURE_UNIT}`}
@@ -33,7 +33,7 @@ export default function SizeAndWeight({size}: {size: IItemSize}) {
 			{weight && <>
 				<dl className='product-attrs__item'>
 					<dt className='product-attrs__item-name-wrapper'>
-						<span className='product-attrs__item-name'>Weight</span>
+						<span className='product-attrs__item-name'>Peso</span>
 					</dt>
 					<dd className='product-attrs__item-value'>
 						{`${weight} ${WEIGHT_MEASURE_UNIT}`}

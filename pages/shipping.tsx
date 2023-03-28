@@ -8,7 +8,7 @@ export default function ShippingPage({mainMenu, footerMenu}: IShippingPageProps)
 	return (
 		<MainLayout mainMenu={mainMenu} footerMenu={footerMenu}>
 			<div className={'container-xxl'}>
-				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Shipping</h1>
+				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Envios</h1>
 				<div className='text-container'>
 					<p>
 						<a href={'https://google.com'} target={'_blank'}>Lorem ipsum</a> dolor sit amet <b>consectetur</b> adipiscing elit facilisis
