@@ -3,7 +3,7 @@ import HeaderCart from '../cart/HeaderCart';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux';
 import {MouseEvent} from 'react';
 import {setIsOpened} from '../../redux/reducers/asideMenu';
-// import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logojpeg.jpeg';
 import clsx from 'clsx';
 import {RootState} from '../../redux/store';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
@@ -24,8 +24,8 @@ export default function MarsLogoRow() {
 				<div className={'mars-logo-row__logo-wrapper'}>
 					<Link href={'/'}>
 						<a className={'mars-logo-row__logo'}>
-							<span>Miami Store</span>
-							{/* <img src={logoImg.src} alt={'Brand Shop'} /> */}
+							<span></span>
+							<img src={logoImg.src} alt={'Brand Shop'} />
 						</a>
 					</Link>
 				</div>

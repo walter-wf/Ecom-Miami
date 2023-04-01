@@ -25,7 +25,7 @@ export default function SocialButtons() {
 				</div>
 			</div>
 			<p className='page-footer__social-buttons company-info'>
-				Todos los derechos reservados. Miami Store 2023
+				Todos los derechos reservados. Delta Development Software and Miami Home
 			</p>
 		</>
 	);

@@ -2,7 +2,7 @@
 // import logoImg from '../../assets/logo.svg';
 
 export default function FooterAbout({companyTitle}: {companyTitle?: string}) {
-	const title = companyTitle || '© Miami Store';
+	const title = companyTitle || '© Delta Development Software and Miami Home';
 	return (
 		<>
 			{/* <div className='page-footer__logo'>
@@ -16,7 +16,7 @@ export default function FooterAbout({companyTitle}: {companyTitle?: string}) {
 				<p className='title'>{title}</p>
 			</div>
 			<div className='page-footer__disclaimer'>
-					Articulos exclusivos importados desde Miami, servicio de carga maritica y aerea. Envios a todo Ecuador
+					Articulos exclusivos importados desde Miami, servicio de carga maritima y aerea. Envios a todo Ecuador
 			</div>
 		</>
 	);

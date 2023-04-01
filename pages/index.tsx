@@ -29,7 +29,7 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 		<MainLayout mainMenu={mainMenu} footerMenu={footerMenu}>
 			<div className='container-xxl'>
 				<MainPageSlider />
-				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Miami Store</h1>
+				<h1 className='page-heading page-heading_h1  page-heading_m-h1'></h1>
 				<ProductsList
 					products={products}
 					className={'page-block'}
