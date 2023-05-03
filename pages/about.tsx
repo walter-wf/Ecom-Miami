@@ -8,7 +8,7 @@ export default function ShippingPage({mainMenu, footerMenu}: IPageProps) {
 	return (
 		<MainLayout mainMenu={mainMenu} footerMenu={footerMenu}>
 			<div className={'container-xxl'}>
-				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Sobre nosotros</h1>
+				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Sobre nosotros-Miami Home</h1>
 				<div className='text-container'>
 					<p>
 					Nuestra historia comienza con nuestras propias necesidades. Cuando llegamos a Miami, nos dimos cuenta de que teníamos muy pocas opciones de calidad y productos prácticos. ¿La solución? Traer todo lo que queríamos. Poco a poco, comenzamos a notar que esta carencia era una oportunidad.
