@@ -50,7 +50,7 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 					},
 					{
 						icon:  <FontAwesomeIcon icon={faSmile} className={'text-with-icons__icon'} />,
-						title: 'Se ve bien comprar en Miami Store',
+						title: 'Se ve bien comprar en Miami Home',
 						comment: ''
 					},
 				]}
