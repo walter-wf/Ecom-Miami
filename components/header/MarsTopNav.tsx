@@ -22,7 +22,7 @@ export default function MarsTopNav() {
 				</div>
 				<div className={'mars-top-nav__note'}>
 					<p>
-						Lunes a sabado en los horarios de 10:00 a 18:00.  <FontAwesomeIcon icon={faShippingFast} className={'text-theme-color ms-1'} />
+						Lunes a sabado en los horarios de 10:00 a 19:00.  <FontAwesomeIcon icon={faShippingFast} className={'text-theme-color ms-1'} />
 					</p>
 				</div>
 				<ul className={'mars-top-nav__menu list-unstyled'}>
