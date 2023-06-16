@@ -11,7 +11,7 @@ export default function FooterContacts() {
 				<span className='icon'>
 					<FontAwesomeIcon icon={faWhatsapp}/>
 				</span>
-				<a className='link' href='tel:+593987309734'>+593987309734</a>
+				<a className='link' href='tel:+590968265179'>+590968265179</a>
 			</p>
 			<p className='page-footer__icon-w-link'>
 				<span className='icon'>
@@ -23,7 +23,7 @@ export default function FooterContacts() {
 				<span className='icon'>
 					<FontAwesomeIcon icon={faClock}/>
 				</span>
-				9:00am &mdash; 6:00pm
+				10:00am &mdash; 18:00pm
 			</p>
 		</>
 	);

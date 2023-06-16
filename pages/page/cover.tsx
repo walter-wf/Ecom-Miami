@@ -20,7 +20,7 @@ export default function CoverPage() {
 				}}
 				link={'http://google.com'}
 			/>
-			<div className='text-center' style={{minHeight: 200}}>Some other text here</div>
+			<div className='text-center' style={{minHeight: 200}}></div>
 		</>
 	);
 }

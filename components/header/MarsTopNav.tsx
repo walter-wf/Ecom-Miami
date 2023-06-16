@@ -11,12 +11,13 @@ export default function MarsTopNav() {
 		<nav className={'mars-top-nav'}>
 			<div className={'container-xxl mars-top-nav__container'}>
 				<div className={'mars-top-nav__contacts'}>
-					<Contact href={'tel:+593987309734'}
-									 label={'+593987309734'}
+					<Contact href={'tel:+590968265179'}
+									 label={'+590968265179'}
 									 icon={<FontAwesomeIcon icon={faPhoneAlt} />}
 					/>
 					<Contact href={'https://api.whatsapp.com/send/?phone=593987309734&text&type=phone_number&app_absent=0'}
-									 label={'+593987309734'}
+									 label={'+590968265179'}
+									 
 									 icon={<FontAwesomeIcon icon={faWhatsapp} />}
 					/>
 				</div>

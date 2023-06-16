@@ -36,7 +36,7 @@ export default function MainLayout({children, title, metaData, mainMenu, footerM
 				<meta name='theme-color' content='#ffffff' />
 
 				<meta property='og:type' content='website' />
-				<meta property='og:title' content={title || 'Miami Store'} />
+				<meta property='og:title' content={title || 'Miami Home'} />
 				<meta property='og:url' content={canonicalUrl || shopBaseUrl} />
 				<meta property='og:image' content={imgUrl || (shopBaseUrl + '/og.jpeg')} />
 				{description && <meta property='og:description' content={description} />}

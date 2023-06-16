@@ -67,7 +67,7 @@ export default function CartPage({mainMenu, footerMenu}: ICartPageProps) {
 										</p>
 										<p className='cart-page__warning'>
 											<Link href='/'>
-												<a className='btn btn-success'>Vamos a comprar!</a>
+												<a className='btn btn-success'>¡Vamos a comprar!</a>
 											</Link>
 										</p>
 									</>}
