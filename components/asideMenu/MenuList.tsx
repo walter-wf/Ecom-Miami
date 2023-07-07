@@ -7,6 +7,9 @@ import {IMenuItem} from '../../@types/components';
 import {useAppSelector} from '../../hooks/redux';
 import {RootState} from '../../redux/store';
 
+
+
+
 export default function AsideMenuList({menuList}: {menuList: IMenuItem[]}) {
 	const isRouting = useAppSelector((state: RootState) => state.app.isRouteChanging);
 	const [opened, setOpened] = useState<number[]>([]);
