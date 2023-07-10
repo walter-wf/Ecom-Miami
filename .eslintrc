@@ -21,7 +21,8 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
-		"react-hooks"
+		"react-hooks",
+		"next"
 	],
 	"rules": {
 		"semi": ["error", "always"],
