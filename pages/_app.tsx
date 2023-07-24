@@ -1,5 +1,5 @@
-import {Provider} from 'react-redux';
-import {store} from '../redux/store';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
 import 'nprogress/nprogress.css';
 import '../styles/styles.scss';
 
@@ -18,18 +18,20 @@ import 'boundless-checkout-react/dist/index.css';
 
 import '@fortawesome/fontawesome-free/css/svg-with-js.css';
 
-import {AppProps} from 'next/app';
+import { AppProps } from 'next/app';
 import RouterListener from '../components/RouterListener';
 import LoadingLine from '../components/LoadingLine';
 
-function MyApp({Component, pageProps}: AppProps) {
-	return (
-		<Provider store={store}>
-			<RouterListener />
-			<LoadingLine />
-			<Component {...pageProps} />
-		</Provider>
-	);
+function MyApp({ Component, pageProps }: AppProps) {
+  const PageComponent = Component as React.FC; // Convert Component to a functional component
+
+  return (
+    <Provider store={store}>
+      <RouterListener />
+      <LoadingLine />
+      <PageComponent {...pageProps} />
+    </Provider>
+  );
 }
 
 export default MyApp;

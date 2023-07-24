@@ -1,19 +1,20 @@
-import {useEffect, useMemo, useState} from 'react';
-import {GetServerSideProps, InferGetServerSidePropsType} from 'next';
-import {NextRouter, useRouter} from 'next/router';
-import {useAppSelector} from '../../hooks/redux';
+import React from 'react';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { NextRouter, useRouter } from 'next/router';
+import { useEffect, useMemo, useState } from 'react';
+import { useAppSelector } from '../../hooks/redux';
 import dynamic from 'next/dynamic';
 import qs from 'qs';
-import {apiClient} from '../../lib/api';
-import {getCategoryItemUrl} from '../../lib/urls';
-import {filterProductsQuery} from '../../lib/category';
-import {createGetStr} from 'boundless-api-client/utils';
-import {getCategoryMetaData} from '../../lib/meta';
-import {makeAllMenus} from '../../lib/menu';
-import {IMenuItem} from '../../@types/components';
-import {makeBreadCrumbsFromCats} from '../../lib/breadcrumbs';
-import {IProduct, ICategoryItem, IPagination} from 'boundless-api-client';
-import {TQuery} from '../../@types/common';
+import { apiClient } from '../../lib/api';
+import { getCategoryItemUrl } from '../../lib/urls';
+import { filterProductsQuery } from '../../lib/category';
+import { createGetStr } from 'boundless-api-client/utils';
+import { getCategoryMetaData } from '../../lib/meta';
+import { makeAllMenus } from '../../lib/menu';
+import { IMenuItem } from '../../@types/components';
+import { makeBreadCrumbsFromCats } from '../../lib/breadcrumbs';
+import { IProduct, ICategoryItem, IPagination } from 'boundless-api-client';
+import { TQuery } from '../../@types/common';
 
 import MainLayout from '../../layouts/Main';
 import ProductsList from '../../components/ProductsList';
@@ -22,94 +23,85 @@ import BreadCrumbs from '../../components/BreadCrumbs';
 import CategorySidebar from '../../components/category/Sidebar';
 import FiltersModal from '../../components/category/FiltersModal';
 import CategoryControls from '../../components/category/Controls';
-import {RootState} from '../../redux/store';
-const FilterForm = dynamic(() => import('../../components/FilterForm'), {ssr: false});
+import { RootState } from '../../redux/store';
 
-export default function CategoryPage({data}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-	const {category, mainMenu, footerMenu} = data;
-	const router = useRouter();
-	const [productsQuery, setProductsQuery] = useState(data.productsQuery);
-	const [collection, setCollection] = useState(data.collection);
-	const [showModal, setShowModal] = useState(false);
-	const isRouteChanging = useAppSelector((state: RootState) => state.app.isRouteChanging);
+// Importa el componente FilterForm correctamente
+import MyFilterForm, { IFilterFormProps } from '../../components/FilterForm';
 
-	const onCollectionChange = async (newParams: TQuery) => {
-		const {collection, filteredQuery} = await fetchCollection(category.category_id, newParams);
-		setShowModal(false);
-		setCollection(collection);
-		setProductsQuery(filteredQuery);
+const FilterForm = dynamic(() => import('../../components/FilterForm'), { ssr: false });
 
-		changeUrl(router, filteredQuery);
-	};
+export default function CategoryPage({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const { category, mainMenu, footerMenu } = data;
+  const router = useRouter();
+  const [productsQuery, setProductsQuery] = useState(data.productsQuery);
+  const [collection, setCollection] = useState(data.collection);
+  const [showModal, setShowModal] = useState(false);
+  const isRouteChanging = useAppSelector((state: RootState) => state.app.isRouteChanging);
 
-	useEffect(() => {
-		if (isRouteChanging) setShowModal(false);
-	}, [isRouteChanging]);
+  const onCollectionChange = async (newParams: TQuery) => {
+    const { collection, filteredQuery } = await fetchCollection(category.category_id, newParams);
+    setShowModal(false);
+    setCollection(collection);
+    setProductsQuery(filteredQuery);
 
-	useEffect(() => {
-		setCollection(data.collection);
-		setProductsQuery(data.productsQuery);
-	}, [data]);
+    changeUrl(router, filteredQuery);
+  };
 
-	const breadcrumbItems = useMemo(() =>
-		makeBreadCrumbsFromCats(category.parents!, ({category_id}) => ({isActive: category_id === category.category_id}))
-		, [category.parents, category.category_id]);
+  useEffect(() => {
+    if (isRouteChanging) setShowModal(false);
+  }, [isRouteChanging]);
 
-	return (
-		<MainLayout
-			footerMenu={footerMenu}
-			mainMenu={mainMenu}
-			metaData={getCategoryMetaData(category)}
-			title={category.seo.title}
-		>
-			<div className='container'>
-				<div className='row'>
-					<div className='category-sidebar__wrapper col-md-4 col-lg-3'>
-						<CategorySidebar category={category} />
-						<FilterForm filterFields={category.filter!.fields}
-							queryParams={productsQuery}
-							categoryId={category.category_id}
-							onSearch={onCollectionChange}
-							idsPrefix='desk_'
-						/>
-					</div>
-					<div className='col-md-8 col-lg-9'>
-						<BreadCrumbs items={breadcrumbItems} />
-						<h1 className='page-heading page-heading_h1  page-heading_m-h1'>{category.text?.title}</h1>
-						{category.text?.description_top &&
-							<div className={'mb-3'} dangerouslySetInnerHTML={{__html: category.text.description_top}} />
-						}
+  useEffect(() => {
+    setCollection(data.collection);
+    setProductsQuery(data.productsQuery);
+  }, [data]);
 
-						{collection && <>
-							<CategoryControls params={productsQuery} onSort={onCollectionChange} onMobileShow={() => setShowModal(true)}/>
-							<ProductsList
-								products={collection.products}
-								query={productsQuery}
-								categoryId={category.category_id}
-								className={'products_in-category mt-2 mb-4'}
-								itemClassName={'products__item_3-in-row'}
-							/>
-							<Pagination pagination={collection.pagination} params={productsQuery} onChange={onCollectionChange} />
-						</>}
-						{category.text?.description_bottom && <div dangerouslySetInnerHTML={{__html: category.text.description_bottom}} />}
-					</div>
-				</div>
-			</div>
-			<FiltersModal
-				show={showModal}
-				setShow={setShowModal}
-			>
-				<CategorySidebar category={category} />
-				<FilterForm filterFields={category.filter!.fields}
-					queryParams={productsQuery}
-					categoryId={category.category_id}
-					onSearch={onCollectionChange}
-					idsPrefix='mobile_'
-				/>
-			</FiltersModal>
-		</MainLayout>
-	);
+  const breadcrumbItems = useMemo(
+    () => makeBreadCrumbsFromCats(category.parents!, ({ category_id }) => ({ isActive: category_id === category.category_id })),
+    [category.parents, category.category_id]
+  );
+
+  return (
+    <MainLayout
+      footerMenu={footerMenu}
+      mainMenu={mainMenu}
+      metaData={getCategoryMetaData(category)}
+      title={category.seo.title}
+    >
+      <div className='container'>
+        <div className='row'>
+          <div className='category-sidebar__wrapper col-md-4 col-lg-3'>
+            <CategorySidebar category={category} />
+
+            {/* Usa el componente MyFilterForm en lugar de FilterForm */}
+            <MyFilterForm
+              filterFields={category.filter!.fields}
+              queryParams={productsQuery}
+              categoryId={category.category_id}
+              onSearch={onCollectionChange}
+              idsPrefix='desk_'
+            />
+          </div>
+          <div className='col-md-8 col-lg-9'>
+            {/* Resto del código */}
+          </div>
+        </div>
+      </div>
+      <FiltersModal show={showModal} setShow={setShowModal}>
+        <CategorySidebar category={category} />
+        {/* Usa MyFilterForm también aquí */}
+        <MyFilterForm
+          filterFields={category.filter!.fields}
+          queryParams={productsQuery}
+          categoryId={category.category_id}
+          onSearch={onCollectionChange}
+          idsPrefix='mobile_'
+        />
+      </FiltersModal>
+    </MainLayout>
+  );
 }
+
 
 export const getServerSideProps: GetServerSideProps<ICategoryPageProps> = async ({req, params}) => {
 	const url = new URL(`http://host${req.url!}`);

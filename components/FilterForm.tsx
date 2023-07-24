@@ -1,7 +1,8 @@
-import {IFilterField, IFilterFieldRange, TCharacteristicType, TFilterFieldType} from 'boundless-api-client';
-import {TQuery} from '../@types/common';
-import {SyntheticEvent, useCallback, useEffect, useState} from 'react';
-import {apiClient} from '../lib/api';
+import React from "react"
+import { IFilterField, IFilterFieldRange, TCharacteristicType, TFilterFieldType } from 'boundless-api-client';
+import { TQuery } from '../@types/common';
+import { SyntheticEvent, useCallback, useEffect, useState } from 'react';
+import { apiClient } from '../lib/api';
 import PriceRangeField from './filterForm/PriceRange';
 import _debounce from 'lodash/debounce';
 import _omit from 'lodash/omit';
@@ -12,10 +13,9 @@ import TextCharacteristic from './filterForm/TextCharacteristic';
 import BrandSelect from './filterForm/BrandSelect';
 import Stock from './filterForm/Stock';
 import _isEqualWith from 'lodash/isEqualWith';
-import {filterKeys, filterProductsQuery} from '../lib/category';
+import { filterKeys, filterProductsQuery } from '../lib/category';
 
 const DEFAULT_DISPLAY_LIMIT = 3;
-
 /**
  * @param filterFields - might be passed manually, e.g. pass:
  * [{type: 'price'}] to have filters by price only. In other words you don't necessarily need to fetch filters from the server side.
@@ -292,18 +292,18 @@ const isMultiCaseType = (type: TCharacteristicType) => [TCharacteristicType.radi
 
 type TShortFilterField = Pick<IFilterField, 'type' | 'characteristic_id'>;
 
-interface IFilterFormProps {
-	filterFields: TShortFilterField[],
-	queryParams: TQuery;
-	categoryId: number;
-	onSearch: (data: TQuery) => void;
-	idsPrefix: string;
+export interface IFilterFormProps {
+  filterFields: TShortFilterField[];
+  queryParams: TQuery;
+  categoryId: number;
+  onSearch: (data: TQuery) => void;
+  idsPrefix: string;
 }
 
 export interface IFilterFieldProps {
-	field: IFilterFieldRange;
-	values: TQuery;
-	onChange: (value: {[key: string]: any}) => void;
-	idsPrefix: string;
-	displayLimit?: number;
+  field: IFilterFieldRange;
+  values: TQuery;
+  onChange: (value: { [key: string]: any }) => void;
+  idsPrefix: string;
+  displayLimit?: number; // Agregar displayLimit como propiedad opcional
 }
