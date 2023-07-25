@@ -24,11 +24,12 @@
     "allowJs": true,
     "skipLibCheck": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "noEmit": true
   },
   "include": [
     "./**/*.ts",
-    "./**/*.tsx",
+    "./**/*.tsx"
   ],
   "exclude": [
     "node_modules"
