@@ -1,3 +1,4 @@
+import React from 'react';
 import {useCart} from '../../hooks/cart';
 import {startCheckout, StarterWrapper} from 'boundless-checkout-react';
 import {useRouter} from 'next/router';
@@ -45,13 +46,13 @@ export default function CheckoutPage() {
 	}
 
 	return (
-		<>
+		<React.Fragment>
 			<Head>
 				<meta name='robots' content='noindex' />
 			</Head>
 			<div>
 				<div ref={checkoutRef}></div>
 			</div>
-		</>
+			</React.Fragment>
 	);
 }

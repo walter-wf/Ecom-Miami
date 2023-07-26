@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -37,7 +38,7 @@ export default function MainLayout({ children, title, metaData, mainMenu, footer
   const asideIsOpened = useAppSelector((state: RootState) => state.asideMenu.isOpened);
 
   return (
-    <>
+    <React.Fragment>
       <Head>
         <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -55,6 +56,6 @@ export default function MainLayout({ children, title, metaData, mainMenu, footer
         <Footer menuList={footerMenu} />
       </div>
       {mainMenu && <AsideMenu menuList={mainMenu} />}
-    </>
+      </React.Fragment>
   );
 }
